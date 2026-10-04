@@ -1,149 +1,186 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的工具作品集</title>
-  <meta name="description" content="自用的效率小工具合集：B站音乐下载器、网课辅助脚本等，全部开源。">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>">
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>我的工具箱</title>
+<meta name="description" content="自己写、自己用的效率小工具：B站音乐下载器、网课辅助脚本等，全部开源。">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-  <!-- ══════════ 顶部导航 ══════════ -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a href="#hero" class="logo">🛠️ 我的工具箱</a>
-      <nav class="links">
-        <a href="#works">作品</a>
-        <a href="#about">关于</a>
-        <a href="https://github.com/JuanShoganVlaska" target="_blank" rel="noopener">GitHub ↗</a>
-      </nav>
+<!-- ═══════════ 导航 ═══════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a class="nav-brand" href="#top">工具箱</a>
+    <div class="nav-links">
+      <a href="#bilimp3">BiliMP3</a>
+      <a href="#works">全部作品</a>
+      <a href="#about">关于</a>
+      <a href="https://github.com/JuanShoganVlaska" target="_blank" rel="noopener">GitHub</a>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <!-- ══════════ 首屏 ══════════ -->
-  <section id="hero" class="hero">
-    <p class="hero-badge">全部免费 · 全部开源</p>
-    <h1>自己动手，把电脑变得顺手一点</h1>
-    <p class="hero-sub">
-      这里是我平时自己写、自己用的小工具。<br>
-      它们帮我省下重复劳动的时间 —— 希望你也能用上。
+<main id="top">
+
+<!-- ═══════════ 首屏 ═══════════ -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow reveal">我的工具箱</p>
+    <h1 class="reveal" style="--d:.06s">把电脑<br>变得顺手一点。</h1>
+    <p class="lede reveal" style="--d:.12s">
+      遇到重复劳动，就写个小工具解决它。<br>做顺手了就开源出来 —— 万一也能帮到你。
     </p>
-    <div class="hero-btns">
-      <a href="#works" class="btn btn-primary">看看作品 ↓</a>
-      <a href="https://github.com/JuanShoganVlaska" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+    <div class="cta-row reveal" style="--d:.18s">
+      <a class="link-arrow" href="#bilimp3">认识 BiliMP3</a>
+      <a class="link-arrow" href="#works">浏览全部作品</a>
     </div>
-  </section>
+  </div>
 
-  <!-- ══════════ 作品区 ══════════ -->
-  <section id="works" class="works">
-    <h2 class="sec-title">作品</h2>
-    <p class="sec-sub">主打一个「能跑、好用、给自己省事」</p>
+  <figure class="hero-visual reveal" style="--d:.24s" data-parallax="0.12">
+    <img src="assets/screenshots/bilimp3.png" alt="BiliMP3 界面">
+  </figure>
+</section>
 
-    <!-- 主打作品：BiliMP3 -->
-    <article class="featured">
-      <div class="featured-shot">
-        <img src="assets/screenshots/bilimp3.png" alt="BiliMP3 软件界面"
-             onerror="this.parentNode.classList.add('no-img'); this.remove();">
-      </div>
-      <div class="featured-text">
-        <p class="card-tag">主打 · 桌面软件</p>
-        <h3>BiliMP3 · B站音乐下载器</h3>
-        <p class="desc">
-          一个窗口软件：在软件里直接打开 B 站搜索页（带封面图的结果卡片），
-          点一下就把视频的音频下载成 MP3。支持音质选择、批量多 P 下载、
-          自动写入标题和 UP 主标签。
-        </p>
-        <ul class="feats">
-          <li>🖼️ 软件内带图搜索结果页，不再跳转外部浏览器</li>
-          <li>⬇️ 一键下载音频并转 MP3（V0 / 320 / 192 / 128 / 原音）</li>
-          <li>📝 自动写入 ID3 标签（标题、UP 主、日期）</li>
-          <li>📦 多 P 视频自动拆分成多个 MP3，进度实时显示可取消</li>
-        </ul>
-        <div class="tech">
-          <span>Python</span><span>WebView2</span><span>yt-dlp</span><span>ffmpeg</span>
-        </div>
-        <div class="card-btns">
-          <a href="https://github.com/JuanShoganVlaska/tools-showcase" target="_blank" rel="noopener" class="btn btn-primary">源码 &amp; 下载</a>
-          <span class="hint">Windows · 免费</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- 其他作品卡片 -->
-    <div class="grid">
-
-      <article class="card">
-        <div class="card-icon">📺</div>
-        <h4>网课自动连播助手</h4>
-        <p class="desc">
-          油猴脚本：视频正常播完后自动帮你点「下一节」。
-          不改观看时长、不跳过视频、不代答题 —— 只是省掉一次点击。
-        </p>
-        <div class="tech"><span>JavaScript</span><span>脚本猫</span><span>Tampermonkey</span></div>
-        <a href="https://github.com/JuanShoganVlaska/tools-showcase" class="card-link" target="_blank" rel="noopener">查看脚本 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">🔔</div>
-        <h4>网课弹题提醒</h4>
-        <p class="desc">
-          视频中间弹出题目时：闪标题 + 蜂鸣 + 系统通知，把你叫回来自己作答。
-          只提醒、不代答，题目永远是你自己做的。
-        </p>
-        <div class="tech"><span>JavaScript</span><span>脚本猫</span></div>
-        <a href="https://github.com/JuanShoganVlaska/tools-showcase" class="card-link" target="_blank" rel="noopener">查看脚本 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">⌨️</div>
-        <h4>键盘答题辅助</h4>
-        <p class="desc">
-          手部不便时的无障碍工具：数字键 1-9 选选项、空格切换、回车提交。
-          键盘代替鼠标，不替你判断答案。
-        </p>
-        <div class="tech"><span>JavaScript</span><span>无障碍</span></div>
-        <a href="https://github.com/JuanShoganVlaska/tools-showcase" class="card-link" target="_blank" rel="noopener">查看脚本 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">🔬</div>
-        <h4>页面结构诊断脚本</h4>
-        <p class="desc">
-          开发辅助：一键抓取网页上的按钮、目录、视频元素结构，
-          自动复制成诊断报告，方便给脚本适配新的页面改版。
-        </p>
-        <div class="tech"><span>JavaScript</span><span>调试</span></div>
-        <a href="https://github.com/JuanShoganVlaska/tools-showcase" class="card-link" target="_blank" rel="noopener">查看脚本 →</a>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ══════════ 关于 ══════════ -->
-  <section id="about" class="about">
-    <h2 class="sec-title">关于</h2>
-    <p class="about-text">
-      一个喜欢折腾的普通用户。遇到重复劳动就写个小工具解决它，<br>
-      做顺手了就整理出来开源，万一也能帮到你呢。
+<!-- ═══════════ 主打作品 ═══════════ -->
+<section class="spotlight" id="bilimp3">
+  <div class="wrap">
+    <p class="eyebrow reveal">主打作品</p>
+    <h2 class="giant reveal" style="--d:.06s">BiliMP3</h2>
+    <p class="tagline reveal" style="--d:.1s">B 站音乐，一键到手。</p>
+    <p class="body-text reveal" style="--d:.14s">
+      一个安静的桌面软件。<br>
+      在里面搜 B 站视频，卡片上带封面图，点一下就把音频存成 MP3。
     </p>
-    <div class="tech center">
-      <span>Python</span><span>JavaScript</span><span>HTML/CSS</span>
+    <div class="cta-row reveal" style="--d:.18s">
+      <a class="btn-pill" href="https://github.com/JuanShoganVlaska/tools-showcase" target="_blank" rel="noopener">查看源码</a>
+      <a class="link-arrow" href="https://github.com/JuanShoganVlaska/tools-showcase" target="_blank" rel="noopener">下载使用 ›</a>
+    </div>
+  </div>
+
+  <figure class="shot reveal" style="--d:.22s" data-parallax="0.05">
+    <img src="assets/screenshots/bilimp3.png" alt="BiliMP3 搜索结果界面">
+    <figcaption>软件内的搜索结果页 · 点卡片即可下载</figcaption>
+  </figure>
+
+  <div class="wrap">
+    <ul class="specs">
+      <li class="reveal"><b>1.6<small>秒</small></b><span>平均搜索耗时</span></li>
+      <li class="reveal" style="--d:.06s"><b>192<small>kbps</small></b><span>纯音频码率上限</span></li>
+      <li class="reveal" style="--d:.12s"><b>4<small>档</small></b><span>可选输出音质</span></li>
+      <li class="reveal" style="--d:.18s"><b>0<small>元</small></b><span>永久免费开源</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════ 其他作品 ═══════════ -->
+<section class="tiles-section" id="works">
+  <div class="wrap">
+    <h2 class="section-title reveal">还有这些。</h2>
+    <p class="section-sub reveal" style="--d:.06s">都是一句话能说清的小工具，也都是我自己在用的。</p>
+  </div>
+
+  <div class="wrap">
+    <div class="tile-grid">
+
+      <article class="tile reveal">
+        <div class="mock">
+          <div class="mock-player">
+            <span class="mock-dot"></span>
+            <span class="mock-bar"><i style="width:78%"></i></span>
+            <span class="mock-pill">下一节 ›</span>
+          </div>
+        </div>
+        <h3>网课自动连播</h3>
+        <p>视频正常播完后自动点「下一节」。不改观看时长、不跳过视频、不代答题 —— 只是省掉一次点击。</p>
+        <a class="link-arrow small" href="https://github.com/JuanShoganVlaska/tools-showcase" target="_blank" rel="noopener">查看脚本 ›</a>
+      </article>
+
+      <article class="tile reveal" style="--d:.08s">
+        <div class="mock">
+          <div class="mock-notif">
+            <span class="mock-bell">🔔</span>
+            <span class="mock-lines"><i></i><i style="width:62%"></i></span>
+          </div>
+        </div>
+        <h3>弹题提醒</h3>
+        <p>视频中间弹出题目时：闪标题 + 蜂鸣 + 系统通知，把你叫回来。只提醒、不代答，题目永远是你自己做的。</p>
+        <a class="link-arrow small" href="https://github.com/JuanShoganVlaska/tools-showcase" target="_blank" rel="noopener">查看脚本 ›</a>
+      </article>
+
+      <article class="tile reveal" style="--d:.16s">
+        <div class="mock">
+          <div class="mock-keys">
+            <span>1</span><span>2</span><span>3</span><span class="wide">⏎</span>
+          </div>
+        </div>
+        <h3>键盘答题辅助</h3>
+        <p>手部不便时的无障碍工具：数字键选选项、空格切换、回车提交。键盘代替鼠标，不替你判断答案。</p>
+        <a class="link-arrow small" href="https://github.com/JuanShoganVlaska/tools-showcase" target="_blank" rel="noopener">查看脚本 ›</a>
+      </article>
+
+      <article class="tile reveal" style="--d:.24s">
+        <div class="mock">
+          <div class="mock-code">
+            <span></span><span style="width:72%"></span>
+            <span style="width:88%"></span><span style="width:48%"></span>
+          </div>
+        </div>
+        <h3>页面结构诊断</h3>
+        <p>一键抓取网页上的按钮、目录、视频元素结构，自动复制成诊断报告，方便给脚本适配新改版的页面。</p>
+        <a class="link-arrow small" href="https://github.com/JuanShoganVlaska/tools-showcase" target="_blank" rel="noopener">查看脚本 ›</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 关于 ═══════════ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <h2 class="section-title reveal">关于</h2>
+    <p class="body-text big reveal" style="--d:.06s">
+      一个喜欢折腾的普通用户。<br>
+      不爱重复劳动，就把它们一个个写成工具。
+    </p>
+    <div class="chips reveal" style="--d:.12s">
+      <span>Python</span><span>JavaScript</span><span>WebView2</span>
       <span>yt-dlp</span><span>ffmpeg</span><span>Cloudflare Pages</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══════════ 页脚 ══════════ -->
-  <footer class="footer">
-    <p>© <span id="year">2026</span> JuanShoganVlaska · 托管于 Cloudflare Pages</p>
-    <p class="foot-links">
-      <a href="https://github.com/JuanShoganVlaska" target="_blank" rel="noopener">GitHub</a>
-      <span class="dot">·</span>
-      <a href="#hero">回到顶部</a>
+</main>
+
+<!-- ═══════════ 页脚 ═══════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <h4>作品</h4>
+        <a href="#bilimp3">BiliMP3</a>
+        <a href="#works">全部工具</a>
+      </div>
+      <div>
+        <h4>项目</h4>
+        <a href="https://github.com/JuanShoganVlaska/tools-showcase" target="_blank" rel="noopener">GitHub 仓库</a>
+        <a href="https://github.com/JuanShoganVlaska/tools-showcase/blob/main/DEPLOY.md" target="_blank" rel="noopener">部署文档</a>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <a href="https://github.com/JuanShoganVlaska" target="_blank" rel="noopener">@JuanShoganVlaska</a>
+      </div>
+    </div>
+    <p class="legal">
+      © <span id="year">2026</span> JuanShoganVlaska · 本站托管于 Cloudflare Pages ·
+      页面内容仅供学习交流
     </p>
-  </footer>
+  </div>
+</footer>
 
-  <script src="assets/script.js"></script>
+<script src="assets/script.js"></script>
 </body>
 </html>
