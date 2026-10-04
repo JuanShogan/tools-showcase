@@ -218,6 +218,72 @@ section[id], main[id] { scroll-margin-top: 72px; }
   color: var(--gray-dim);
 }
 
+/* ═══════════ 「开发中」占位（替代作品截图） ═══════════ */
+.placeholder {
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  border: 1px dashed rgba(255, 255, 255, .18);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(79, 140, 255, .12), transparent 62%),
+    #0a0a0c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, .6);
+}
+.placeholder.wide { aspect-ratio: 16 / 7; }
+
+.dev-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 0 rgba(0, 113, 227, .5);
+  animation: devPulse 2s infinite;
+}
+@keyframes devPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(0, 113, 227, .45); }
+  70%  { box-shadow: 0 0 0 15px rgba(0, 113, 227, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 113, 227, 0); }
+}
+.dev-title {
+  font-size: clamp(17px, 2.1vw, 25px);
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+.dev-sub {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+/* 亮色区卡片里的开发中占位 */
+.mock.mock-dev {
+  border: 1px dashed #c7c7cc;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dev-badge {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--gray-dim);
+  background: #fff;
+  border: 1px solid #d6d6da;
+  border-radius: 980px;
+  padding: 6px 18px;
+}
+.soon {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #b0b0b5;
+}
+
 /* 规格数字 */
 .specs {
   list-style: none;
@@ -442,4 +508,5 @@ section[id], main[id] { scroll-margin-top: 72px; }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .tile, .btn-pill { transition: none; }
+  .dev-dot { animation: none; }
 }
