@@ -1,0 +1,10 @@
+# 系统与编辑器的临时文件
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+bili-gui-error.log
+
+# 编辑器
+.vscode/
+.idea/
